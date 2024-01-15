@@ -138,13 +138,11 @@ No sobra decir que, todas estas versiones es de propiedad de la empresa Oracle.
 
 ## Instalacion JDK y Netbeans
 
-Para empezar a programar en Java, debemos de descargar el kid de desarrollador de Java (JDK) y por comodidad un entorno de programación como Netbeans (aunque usted puede programar en un bloc de notas como en windows).
+Para empezar a programar en Java, debemos de descargar el kit de desarrollador de Java (JDK) y por comodidad un entorno de programación como Netbeans (aunque usted puede programar en un bloc de notas como en windows).
 
-[Descargar el paquete de JDK y Netbeans integrado](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
+[Descargar el paquete de JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
-NOTA: Busque esta opción:
-
-![Icono de paquete JDK y Netbeans](images/icon-javaSE-with-NetBeans-download.png)
+[Descargar Netbeans](https://netbeans.apache.org/front/main/download/).
 
 Al descargar, ejecutar el archivo y dar siguiente, siguiente... hasta que salga la opción terminar y listo! Ya puede correr programas en Java.
 
