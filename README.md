@@ -43,7 +43,7 @@
     - [Busqueda binaria](#busqueda-binaria).
     - [Conteos](#Conteos).
     - [Mayor y menor](#mayor-y-menor).
-- [Métodos (funciones)](#metodos-(funciones)).
+- [Métodos (funciones)](#metodos-funciones).
 - [Programación orientado a objetos](#programacion-orientado-a-objetos).
   - [Evolución](#evolucion).
 - [Clases](#clases).
@@ -1248,7 +1248,7 @@ JOptionPane.showMessageDialog (null, “El número mayor es: “ + mayor +
 
 ```
 
-## Métodos (funciones)
+## Métodos funciones
 Si en un programa tenemos una serie de instrucciones que repiten varias veces, ¿por qué no agruparlas y aislarlas, darles un nombre, y llamarlas para que se realicen cuando se las necesite, en vez de escribirlas varias veces?
 También, a veces, se desea dividir el código en trozos aislados, bien sea por separar e identificar mejor las diferentes actividades, bien porque alguno de los trozos se desee individualizar para reutilizarse en el futuro.
 Esto se consigue mediante métodos.
@@ -1405,6 +1405,18 @@ el programa principal dice: “Llamar a un método llamado leerCadenaAcotada y A
 • con esos tipos de datos, y
 
 • en ese orden
+
+### Métodos con valor de resultado
+
+**CREAR el método con valor de resultado**
+
+![Crear métodos](images/metodos9.png)
+
+Para llamar a un método que tiene un valor de resultado, hay que considerar que el método, tras ejecutarse, se convierte en una información, la que el método da como respuesta. Este resultado se puede asignar a otra variable que debe ser capaz de recibir el tipo de dato que retorna el método.
+
+Si un método ha de dar como resultado un valor, y no tiene orden return, falla. También falla si el compilador prevé que puede que no se llegue nunca a una orden return. Por ejemplo, este método falla al compilar.
+
+¿Por qué? porque si se llama al método y se le pasa un parámetro que no sea “Amarillo”, no se cumple la condición del if, con lo que el return no se ejecuta, y no hay otro return
 
 ## Programacion orientado a objetos
 
