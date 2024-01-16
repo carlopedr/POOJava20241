@@ -1083,7 +1083,6 @@ El método simplemente lo que va a hacer es reducir la búsqueda a la mitad, par
 Método:
 
 ```java
-
   // realiza una búsqueda binaria en los datos
   public int busquedaBinaria(int elementoBusqueda) {
     int inferior = 0; // extremo inferior del área de búsqueda
@@ -1107,12 +1106,8 @@ Método:
 
     return ubicacion; // devuelve la ubicación de la clave de búsqueda
   } // fin del método busquedaBinaria
-
-
 ```
-
 Método recursivo:
-
 ```java
 // Método privado que implementa recursivamente la búsqueda binaria.
 // El vetor au DEBE estar ordenado ascendentemente !!!
@@ -1136,8 +1131,6 @@ private int busquedaBinariaRecursiva(int x, int izq, int der, int[] au) {
     }
 
 ```
-
-
 Otro método de forma iterativa:
 
 ```java
@@ -1310,8 +1303,10 @@ public class Inicio {
 
 ### Métodos con parámetros
 
-A los métodos, además de decirles "Haz lo que dice aquí ", se les puede decir también: "Haz lo que dice aquí, pero cuidado que además te paso esta información por si la quieres usar”. Esto es lo que se llama parámetros de entrada
-"Haz lo que dice aquí, pero cuidado que cuando acabes, me voy a quedar esperando que me des un resultado, alguna información a mí”. Esto es el llamado valor de resultado (o de retorno), y se dice que el método da como resultado un valor, un valor de retorno
+A los métodos, además de decirles "Haz lo que dice aquí ", se les puede decir también: "Haz lo que dice aquí, pero cuidado que además te paso esta información por si la quieres usar”. 
+Esto es lo que se llama parámetros de entrada
+"Haz lo que dice aquí, pero cuidado que cuando acabes, me voy a quedar esperando que me des un resultado, alguna información a mí”. 
+Esto es el llamado valor de resultado (o de retorno), y se dice que el método da como resultado un valor, un valor de retorno
 Se pueden combinar ambos casos, de modo que un método puede "recibir información adicional (parámetros) para usarla si lo desea, y a la vez, dar como resultado un valor al sitio desde donde se le llamó inicialmente"
 
 ![Crear métodos](images/metodos3.png)
@@ -1320,14 +1315,14 @@ Se pueden combinar ambos casos, de modo que un método puede "recibir informaci�
 
 Cuando un método necesita información, y no puede acceder a ella, puede pedir que se le envíe dicha información por medio de los parámetros de entrada.
 ¿Cómo se definen los parámetros? En el método, cuando se escribe en la clase se debe especificar (entre los paréntesis) para cada parámetro:
-tipo de dato que se espera recibir en el futuro
-nombre interno con el que vamos a llamar a lo que venga
+**tipo de dato** que se espera recibir en el futuro
+**nombre interno** con el que vamos a llamar a lo que venga
 Ejemplo:
 ![Crear métodos](images/metodos4.png)
-Se pueden poner varios parámetros separados por coma, y pueden ser de diferente tipo:
+Se pueden poner **varios parámetros separados por coma**, y pueden ser de diferente tipo:
 Ejemplo:
 ![Crear métodos](images/metodos5.png)
-El tipo de dato puede ser un tipo primitivo, o una clase Java o propia (depende de lo que se desee recibir)
+El tipo de dato puede ser un tipo **primitivo**, o una **clase** Java o propia (depende de lo que se desee recibir)
 Ejemplo:
 ![Crear métodos](images/metodos6.png)
 
