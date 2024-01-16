@@ -43,7 +43,7 @@
     - [Busqueda binaria](#busqueda-binaria).
     - [Conteos](#Conteos).
     - [Mayor y menor](#mayor-y-menor).
-- [Métodos](#metodos-funciones).
+- [Métodos (funciones)](#metodos-(funciones)).
 - [Programación orientado a objetos](#programacion-orientado-a-objetos).
   - [Evolución](#evolucion).
 - [Clases](#clases).
