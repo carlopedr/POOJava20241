@@ -1248,7 +1248,7 @@ JOptionPane.showMessageDialog (null, “El número mayor es: “ + mayor +
 
 ```
 
-## Métodos funciones
+## Métodos (funciones)
 Si en un programa tenemos una serie de instrucciones que repiten varias veces, ¿por qué no agruparlas y aislarlas, darles un nombre, y llamarlas para que se realicen cuando se las necesite, en vez de escribirlas varias veces?
 También, a veces, se desea dividir el código en trozos aislados, bien sea por separar e identificar mejor las diferentes actividades, bien porque alguno de los trozos se desee individualizar para reutilizarse en el futuro.
 Esto se consigue mediante métodos.
