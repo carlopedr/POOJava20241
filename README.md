@@ -1269,6 +1269,85 @@ Este ejemplo ilustra el caso de una serie de instrucciones que, inicialmente, se
 
 ![Crear métodos](images/metodos1.png)
 
+Los métodos deben escribirse dentro de una clase. Su contenido está delimitado entre llaves ( { } ), con lo que queda claro dónde están sus límites.
+El subprograma main que se ha usado hasta ahora es, en realidad, un método, uno que escribimos dentro de nuestra clase. Es un método especial porque es el punto de entrada al programa, eso es, cuando se manda ejecutar un programa Java busca un método llamado main, y por ahí empieza a leer instrucciones.
+Nuestros métodos, pues, se escribirán dentro la clase, fuera del main, y al mismo nivel que éste.
+Al crear un método, éste es el formato que hay que usar (el contenido entre [ ] es opcional ):
+
+![Crear métodos](images/metodos2.png)
+
+Este es nuestro primer método, consiste en algo muy simple que pide un texto por teclado y lo imprime en mayúsculas:
+```java
+void saludar() {
+	System.out.println("Dame tu nombre y yo te lo imprimo en mayusculas...");
+	Scanner sc = new Scanner(System.in);
+	String texto = sc.nextLine();
+	System.out.println(texto.toUpperCase());
+}
+```
+### Llamada (invocación) a métodos 
+Desde un método main, u cualquier otro método, se puede llamar al método creado simplemente con el nombre y los paréntesis (en nuestro caso, aun estarán vacíos).
+Leer atentamente este ejemplo, ejecutarlo y evaluar los resultados:
+```java
+public class Inicio {
+	public static void main(String[] args) {
+		System.out.println("Primera linea del programa");
+		System.out.println("Estas lineas se ejecutan antes de llamar al método");
+		saludar();
+		System.out.println("Estas lineas se ejecutan despues de llamar al método");
+	System.out.println("Ultima linea del programa");
+	}
+	public static void saludar() {
+		System.out.println("-- Esta es la primera linea del método que se ejecuta");
+		System.out.println("Dame tu nombre y yo te lo imprimo en mayusculas...");
+		Scanner sc = new Scanner(System.in);
+		String texto = sc.nextLine();
+		System.out.println(texto.toUpperCase());
+		System.out.println("-- Esta es la ultima linea del método que se ejecuta");
+	}
+}
+```
+
+### Métodos con parámetros
+
+A los métodos, además de decirles "Haz lo que dice aquí ", se les puede decir también: "Haz lo que dice aquí, pero cuidado que además te paso esta información por si la quieres usar”. Esto es lo que se llama parámetros de entrada
+"Haz lo que dice aquí, pero cuidado que cuando acabes, me voy a quedar esperando que me des un resultado, alguna información a mí”. Esto es el llamado valor de resultado (o de retorno), y se dice que el método da como resultado un valor, un valor de retorno
+Se pueden combinar ambos casos, de modo que un método puede "recibir información adicional (parámetros) para usarla si lo desea, y a la vez, dar como resultado un valor al sitio desde donde se le llamó inicialmente"
+
+![Crear métodos](images/metodos3.png)
+
+#### Crear método con parámetros
+
+Cuando un método necesita información, y no puede acceder a ella, puede pedir que se le envíe dicha información por medio de los parámetros de entrada.
+¿Cómo se definen los parámetros? En el método, cuando se escribe en la clase se debe especificar (entre los paréntesis) para cada parámetro:
+tipo de dato que se espera recibir en el futuro
+nombre interno con el que vamos a llamar a lo que venga
+Ejemplo:
+![Crear métodos](images/metodos4.png)
+Se pueden poner varios parámetros separados por coma, y pueden ser de diferente tipo:
+Ejemplo:
+![Crear métodos](images/metodos5.png)
+El tipo de dato puede ser un tipo primitivo, o una clase Java o propia (depende de lo que se desee recibir)
+Ejemplo:
+![Crear métodos](images/metodos6.png)
+
+Ejemplo: Imaginemos que al método que se vio antes que leía un String por teclado, le vamos a añadir que antes de hacer esta petición, muestre un mensaje, pero no siempre el mismo, sino el texto que se le pase como parámetro:
+```java
+// Método que recibe un string como parámetro, lo imprime y luego pide
+// por teclado una cadena, que tambien imprime
+public static void leerCadena(String mensaje) {
+	System.out.println(mensaje);
+	Scanner sc = new Scanner(System.in);
+	String texto = sc.nextLine();
+	System.out.println(texto);
+}
+```
+![Crear métodos](images/metodos7.png)
+
+Cuando se usa un método con argumentos, al indicar el argumento, se puede escribir un valor explícito (un número, una cadena) o escribir una variable (que contiene el valor a pasar).
+![Crear métodos](images/metodos8.png)
+
+
 ## Programacion orientado a objetos
 
 La programación orientada a objetos es un paradigma surgido en los años 70, que utiliza objetos como elementos fundamentales en la construcción de la solución. Un objeto es una abstracción de algún hecho o ente del mundo real, con atributos que representan sus características o propiedades, y métodos que emulan su comportamiento o actividad. Todas las propiedades y métodos comunes a los objetos se encapsulan o agrupan en clases. Una clase es una plantilla, un prototipo para crear objetos; en general, se dice que cada objeto es una instancia o ejemplar de una clase. la POO está basado en varias técnicas, incluyendo herencia, cohesión, abstracción, polimorfismo, acoplamiento y encapsulamiento. Su uso se popularizó a principios de la década de los años 1990. En la actualidad, existe una gran variedad de lenguajes de programación que soportan la orientación a objetos.
