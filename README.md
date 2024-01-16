@@ -1254,6 +1254,21 @@ JOptionPane.showMessageDialog (null, “El número mayor es: “ + mayor +
 
 ```
 
+## Métodos (funciones)
+Si en un programa tenemos una serie de instrucciones que repiten varias veces, ¿por qué no agruparlas y aislarlas, darles un nombre, y llamarlas para que se realicen cuando se las necesite, en vez de escribirlas varias veces?
+También, a veces, se desea dividir el código en trozos aislados, bien sea por separar e identificar mejor las diferentes actividades, bien porque alguno de los trozos se desee individualizar para reutilizarse en el futuro.
+Esto se consigue mediante métodos.
+Un método es un miniprograma, un conjunto de instrucciones agrupadas, dentro de una clase, a las que se da un nombre, y que realizan una determinada tarea. A este conjunto de instrucciones se le puede llamar luego mediante su nombre.
+Cuando se llama a un método, la ejecución del programa pasa al método y cuando éste acaba, la ejecución continúa a partir del punto donde se produjo la llamada.
+Los métodos permiten, entre otras ventajas:
+- separar las operaciones en módulos, aislados y más fáciles de comprender
+- reutilizar código, pues si unas operativas son repetitivas, se repitan varias veces, puedo escribirlas solo una vez y llamarlas tantas veces como quiera
+
+### Creación de métodos
+Este ejemplo ilustra el caso de una serie de instrucciones que, inicialmente, se repiten varias veces, pero que se han agrupado, y aislado en un método (llamado pedir) , al que se llama cuando se necesita.
+
+![Crear métodos](images/metodos1.png)
+
 ## Programacion orientado a objetos
 
 La programación orientada a objetos es un paradigma surgido en los años 70, que utiliza objetos como elementos fundamentales en la construcción de la solución. Un objeto es una abstracción de algún hecho o ente del mundo real, con atributos que representan sus características o propiedades, y métodos que emulan su comportamiento o actividad. Todas las propiedades y métodos comunes a los objetos se encapsulan o agrupan en clases. Una clase es una plantilla, un prototipo para crear objetos; en general, se dice que cada objeto es una instancia o ejemplar de una clase. la POO está basado en varias técnicas, incluyendo herencia, cohesión, abstracción, polimorfismo, acoplamiento y encapsulamiento. Su uso se popularizó a principios de la década de los años 1990. En la actualidad, existe una gran variedad de lenguajes de programación que soportan la orientación a objetos.
