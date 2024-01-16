@@ -1251,25 +1251,32 @@ JOptionPane.showMessageDialog (null, “El número mayor es: “ + mayor +
 Si en un programa tenemos una serie de instrucciones que repiten varias veces, ¿por qué no agruparlas y aislarlas, darles un nombre, y llamarlas para que se realicen cuando se las necesite, en vez de escribirlas varias veces?
 También, a veces, se desea dividir el código en trozos aislados, bien sea por separar e identificar mejor las diferentes actividades, bien porque alguno de los trozos se desee individualizar para reutilizarse en el futuro.
 Esto se consigue mediante métodos.
+
 Un método es un miniprograma, un conjunto de instrucciones agrupadas, dentro de una clase, a las que se da un nombre, y que realizan una determinada tarea. A este conjunto de instrucciones se le puede llamar luego mediante su nombre.
 Cuando se llama a un método, la ejecución del programa pasa al método y cuando éste acaba, la ejecución continúa a partir del punto donde se produjo la llamada.
+
 Los métodos permiten, entre otras ventajas:
 - separar las operaciones en módulos, aislados y más fáciles de comprender
 - reutilizar código, pues si unas operativas son repetitivas, se repitan varias veces, puedo escribirlas solo una vez y llamarlas tantas veces como quiera
 
 ### Creación de métodos
+
 Este ejemplo ilustra el caso de una serie de instrucciones que, inicialmente, se repiten varias veces, pero que se han agrupado, y aislado en un método (llamado pedir) , al que se llama cuando se necesita.
 
 ![Crear métodos](images/metodos1.png)
 
 Los métodos deben escribirse dentro de una clase. Su contenido está delimitado entre llaves ( { } ), con lo que queda claro dónde están sus límites.
+
 El subprograma main que se ha usado hasta ahora es, en realidad, un método, uno que escribimos dentro de nuestra clase. Es un método especial porque es el punto de entrada al programa, eso es, cuando se manda ejecutar un programa Java busca un método llamado main, y por ahí empieza a leer instrucciones.
+
 Nuestros métodos, pues, se escribirán dentro la clase, fuera del main, y al mismo nivel que éste.
-Al crear un método, éste es el formato que hay que usar (el contenido entre [ ] es opcional ):
+
+Al crear un método, éste es el formato que hay que usar (el contenido entre [ ] es opcional):
 
 ![Crear métodos](images/metodos2.png)
 
 Este es nuestro primer método, consiste en algo muy simple que pide un texto por teclado y lo imprime en mayúsculas:
+
 ```java
 void saludar() {
 	System.out.println("Dame tu nombre y yo te lo imprimo en mayusculas...");
@@ -1278,9 +1285,13 @@ void saludar() {
 	System.out.println(texto.toUpperCase());
 }
 ```
+
 ### Llamada (invocación) a métodos 
+
 Desde un método main, u cualquier otro método, se puede llamar al método creado simplemente con el nombre y los paréntesis (en nuestro caso, aun estarán vacíos).
+
 Leer atentamente este ejemplo, ejecutarlo y evaluar los resultados:
+
 ```java
 public class Inicio {
 	public static void main(String[] args) {
@@ -1303,10 +1314,14 @@ public class Inicio {
 
 ### Métodos con parámetros
 
-A los métodos, además de decirles "Haz lo que dice aquí ", se les puede decir también: "Haz lo que dice aquí, pero cuidado que además te paso esta información por si la quieres usar”. 
+A los métodos, además de decirles **"Haz lo que dice aquí ", se les puede decir también: "Haz lo que dice aquí, pero cuidado que además te paso esta información por si la quieres usar”.** 
+
 Esto es lo que se llama parámetros de entrada
-"Haz lo que dice aquí, pero cuidado que cuando acabes, me voy a quedar esperando que me des un resultado, alguna información a mí”. 
+
+**"Haz lo que dice aquí, pero cuidado que cuando acabes, me voy a quedar esperando que me des un resultado, alguna información a mí”.** 
+
 Esto es el llamado valor de resultado (o de retorno), y se dice que el método da como resultado un valor, un valor de retorno
+
 Se pueden combinar ambos casos, de modo que un método puede "recibir información adicional (parámetros) para usarla si lo desea, y a la vez, dar como resultado un valor al sitio desde donde se le llamó inicialmente"
 
 ![Crear métodos](images/metodos3.png)
@@ -1314,19 +1329,31 @@ Se pueden combinar ambos casos, de modo que un método puede "recibir informaci�
 #### Crear método con parámetros
 
 Cuando un método necesita información, y no puede acceder a ella, puede pedir que se le envíe dicha información por medio de los parámetros de entrada.
+
 ¿Cómo se definen los parámetros? En el método, cuando se escribe en la clase se debe especificar (entre los paréntesis) para cada parámetro:
+
 **tipo de dato** que se espera recibir en el futuro
+
 **nombre interno** con el que vamos a llamar a lo que venga
+
 Ejemplo:
+
 ![Crear métodos](images/metodos4.png)
+
 Se pueden poner **varios parámetros separados por coma**, y pueden ser de diferente tipo:
+
 Ejemplo:
+
 ![Crear métodos](images/metodos5.png)
+
 El tipo de dato puede ser un tipo **primitivo**, o una **clase** Java o propia (depende de lo que se desee recibir)
+
 Ejemplo:
+
 ![Crear métodos](images/metodos6.png)
 
 Ejemplo: Imaginemos que al método que se vio antes que leía un String por teclado, le vamos a añadir que antes de hacer esta petición, muestre un mensaje, pero no siempre el mismo, sino el texto que se le pase como parámetro:
+
 ```java
 // Método que recibe un string como parámetro, lo imprime y luego pide
 // por teclado una cadena, que tambien imprime
@@ -1337,11 +1364,46 @@ public static void leerCadena(String mensaje) {
 	System.out.println(texto);
 }
 ```
+
 ![Crear métodos](images/metodos7.png)
 
 Cuando se usa un método con argumentos, al indicar el argumento, se puede escribir un valor explícito (un número, una cadena) o escribir una variable (que contiene el valor a pasar).
+
 ![Crear métodos](images/metodos8.png)
 
+### Métodos con más de un parámetro
+
+Vamos a coger el método de ejercicios anteriores, que elida una cadena por consola, y vamos a hacer que reciba dos parámetros, además del mensaje que ya tenía, un int que usaremos para validar que la cadena que se lea por teclado no sea muy larga (el int será el número máximo de caracteres que se puedan leer). El nuevo método se llamara
+leerCadenaAcotada:
+
+```java
+public static void leerCadenaAcotada(String mensaje, int max) {
+	System.out.println(mensaje);
+	Scanner sc = new Scanner(System.in);
+	String texto = sc.nextLine();
+	if (texto.length() > max) {
+		System.out.println("Cadena muy larga, maximo : "+ max);
+	} else {
+		System.out.println(texto);
+	}
+}
+```
+
+En este caso, cuando se llama desde el programa principal:
+
+```java
+leerCadenaAcotada("Incluya un texto...",20);
+```
+
+**Los parámetros siempre en el orden correcto, con el tipo correcto, y el número correcto de ellos**
+
+el programa principal dice: “Llamar a un método llamado leerCadenaAcotada y ADEMÁS, le envió esta información: “Introduzca un texto” y 20 (UN STRING, Y UN INT)” y luego buscará si realmente existe un método que se llame así y que:
+
+• tenga esos parámetros, solo dos, y
+
+• con esos tipos de datos, y
+
+• en ese orden
 
 ## Programacion orientado a objetos
 
