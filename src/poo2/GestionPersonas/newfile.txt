@@ -1,1 +1,38 @@
-
+Proyecto Cuentas de Ahorro.
+Define una clase Persona con los siguientes datos
+• Atributos privados :
+- Nombre : String
+- NIF : String
+• Y los siguientes métodos:
+- Constructor parametrizado
+- Métodos de acceso para los atributos
+Define una clase Cuenta con los siguientes datos
+• Atributos privados:
+- numerocuenta : entero largo
+- saldo : double
+- cliente : atributo de la clase Persona.
+• Y los siguientes métodos:
+- Constructor que recibe un cliente y un número de cuenta
+- Métodos de acceso para los tres atributos
+- ingresar(double x): permitirá ingresar una cantidad en la cuenta.
+- retirar(double x): permitirá sacar una cantidad de la cuenta.
+Define una clase CuentaCorriente, subclase de Cuenta, con los siguientes datos:
+• Atributos privados:
+- double maximoRetirable : entero
+• Y los siguientes métodos:
+- Constructor completo (con todos los atributos)
+- Métodos de acceso para su atributo
+- Metodo toString()
+• Al retirar dinero hay que tener en cuenta que el importe a retirar debe ser menor o igual
+que maximoRetirable, y mayor que 0.
+Define una clase CuentaAhorro, subclase de Cuenta, con los siguientes datos:
+• Atributos privados:
+- double saldoMinimo : entero
+• Y los siguientes métodos:
+- Constructor parametrizado
+- Métodos de acceso para su atributo
+- Metodo toString()
+• Al retirar dinero hay que tener en cuenta que no se sobrepase el saldo mínimo
+Crea una clase Prueba que cree varias cuentas y pruebe sus métodos ingresar y retirar.
+MEJORA 1: El método retirar de la clase Cuenta es abstracto. Hacer los cambios necesarios para que
+funcione el resto del programa
