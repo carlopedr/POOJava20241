@@ -2,15 +2,26 @@
 package poo.VehiculoHerencia;
 
 
-public class Vehiculo {
+public abstract class VehiculoAbs {
     private String marca;
     private String color;
     private int velocidad;
 
-    public Vehiculo(String marca, String color) {
+    public VehiculoAbs(String marca, String color, int velocidad) {
         this.marca = marca;
         this.color = color;
+        this.velocidad = velocidad;
     }
+
+    public int getVelocidad() {
+        return velocidad;
+    }
+
+    public void setVelocidad(int velocidad) {
+        this.velocidad = velocidad;
+    }
+
+   
 
     public String getMarca() {
         return marca;
@@ -32,11 +43,14 @@ public class Vehiculo {
         this.color=this.color+"+"+color;
     }
     
-     
+    public abstract void parar();
+
     @Override
     public String toString() {
-        return "Vehiculo{" + "marca=" + marca + ", color=" + color + '}';
+        return "VehiculoAbs{" + "marca=" + marca + ", color=" + color + ", velocidad=" + velocidad + '}';
     }
+    
+    
     
     
 }

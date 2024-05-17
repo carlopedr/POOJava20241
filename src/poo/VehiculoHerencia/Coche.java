@@ -1,7 +1,7 @@
 
 package poo.VehiculoHerencia;
 
-public class Coche extends Vehiculo{
+public abstract class Coche extends Vehiculo implements IMovimientos{
     private int numPlazas;
     //private int color;
 
@@ -27,6 +27,8 @@ public class Coche extends Vehiculo{
     public String toString() {
         return "Coche{" + "numPlazas=" + numPlazas + '}';
     }
+
+    
     
     
 }
