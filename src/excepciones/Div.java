@@ -1,5 +1,5 @@
 
-package colections;
+package excepciones;
 
 public class Div {
 
